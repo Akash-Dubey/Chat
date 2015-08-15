@@ -3,6 +3,8 @@
 #include<string>
 #include<cstdlib>
 
+#define xxxxxx "172.19.13.183"
+
 #include<boost/thread.hpp>
 #include<boost/bind.hpp>
 #include<boost/asio.hpp>
@@ -20,7 +22,7 @@ typedef boost::shared_ptr< queue<string_ptr> > messageQueue_ptr;
 
 io_service service;
 messageQueue_ptr messageQueue(new queue<string_ptr>);
-tcp::endpoint ep(ip::address::from_string("127.0.0.1"), 8001);
+tcp::endpoint ep(ip::address::from_string(xxxxxx), 8001);
 const int inputSize = 256;
 string_ptr promptCpy;
 
